@@ -3,12 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/variables.css" />
     <link rel="stylesheet" href="./src/css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      href="./src/assets/icons/favicon-apple-touch-icon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/icons/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/icons/favicon-32x32.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/icons/favicon-16x16.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/icons/favicon-android-chrome-512x512.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="./src/assets/icons/favicon-android-chrome-192x192.png"
+      type="image/png"
+    />
     <title>The Star Wars API Explorer</title>
   </head>
   <body>
+    <header>
+      <!-- Navigation -->
+      <nav class="navbar">
+        <!-- Logo Section -->
+        <div class="navbar__logo-container">
+          <button class="navbar__logo-button" aria-label="Go to Films">
+            <img
+              src="./src/assets/icons/favicon-32x32.png"
+              alt="Website main logo"
+              class="navbar__logo"
+            />
+          </button>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="navbar__controls-container">
+          <ul class="navbar__list">
+            <li class="navbar__item navbar__item--active">
+              <button
+                class="navbar__button navbar__button--active"
+                aria-label="Go to Films"
+              >
+                Films
+              </button>
+            </li>
+            <li class="navbar__item">
+              <button class="navbar__button" aria-label="Go to People">
+                People
+              </button>
+            </li>
+            <li class="navbar__item">
+              <button class="navbar__button" aria-label="Go to Planets">
+                Planets
+              </button>
+            </li>
+            <li class="navbar__item">
+              <button class="navbar__button" aria-label="Go to Vehicles">
+                Vehicles
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Toggle Button Section -->
+        <div class="navbar__toggle-button-container">
+          <button
+            class="navbar__toggle-button"
+            aria-label="Toggle navigation menu"
+          >
+            <i class="fa-solid fa-bars fa-2x navbar__toggle-logo"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Main section for displaying dynamic content from the Star Wars API -->
+      <section class="content__container"></section>
+    </main>
+
+    <!-- Page footer including the links and copyright  -->
+    <footer class="footer">
+      <p class="footer__paragraph">
+        &copy; 2025 Jerzy Szajner. Licensed under the
+        <a
+          href="./License.txt"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View the MIT License details"
+        >
+          MIT License </a
+        >.
+      </p>
+      <ul class="footer__list">
+        <li class="footer__item">
+          <a
+            class="footer__link"
+            href="https://www.instagram.com/starwars/"
+            title="Visit Instagram"
+            aria-label="Visit Instagram"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </li>
+        <li class="footer__item">
+          <a
+            class="footer__link"
+            href="https://www.facebook.com/StarWars"
+            title="Visit Facebook"
+            aria-label="Visit Facebook"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Facebook</a
+          >
+        </li>
+        <li class="footer__item">
+          <a
+            class="footer__link"
+            href="https://www.youtube.com/user/starwars"
+            title="Visit LinkedIn"
+            aria-label="Visit YouTube"
+            target="_blank"
+            rel="noopener noreferrer"
+            >YouTube</a
+          >
+        </li>
+        <li class="footer__item">
+          <a
+            class="footer__link"
+            href="https://swapi.py4e.com/about"
+            title="Visit Vimeo"
+            aria-label="Visit The Star Wars API"
+            target="_blank"
+            rel="noopener noreferrer"
+            >SWAPI</a
+          >
+        </li>
+      </ul>
+    </footer>
     <script type="module" src="./src/js/app.js"></script>
   </body>
 </html>
