@@ -1,13 +1,30 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Remove link decoration */
 a {
     text-decoration: none;
 }
 
+/* Remove list decoration */
 ul {
     list-style: none;
+}
+
+/* Disable image dragging */
+img {
+    -webkit-user-drag: none;
+    user-drag: none;
+}
+
+/* Disable text selection */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
