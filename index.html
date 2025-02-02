@@ -50,8 +50,12 @@
       <!-- Navigation -->
       <nav class="navbar">
         <!-- Logo Section -->
-        <div class="navbar__logo-container">
-          <button class="navbar__logo-button" aria-label="Go to Films">
+        <div class="navbar__logo-container navbar__item">
+          <button
+            class="navbar__logo-button"
+            aria-label="Go to Films"
+            data-action="logo"
+          >
             <img
               src="./src/assets/icons/logo.png"
               alt="Website main logo"
@@ -64,22 +68,38 @@
         <div class="navbar__controls-container">
           <ul class="navbar__controls-list navbar__controls-list--active">
             <li class="navbar__item navbar__item--active">
-              <button class="navbar__button" aria-label="Go to Films">
+              <button
+                class="navbar__button"
+                aria-label="Go to Films"
+                data-action="films"
+              >
                 Films
               </button>
             </li>
             <li class="navbar__item">
-              <button class="navbar__button" aria-label="Go to People">
+              <button
+                class="navbar__button"
+                aria-label="Go to People"
+                data-action="people"
+              >
                 People
               </button>
             </li>
             <li class="navbar__item">
-              <button class="navbar__button" aria-label="Go to Planets">
+              <button
+                class="navbar__button"
+                aria-label="Go to Planets"
+                data-action="planets"
+              >
                 Planets
               </button>
             </li>
             <li class="navbar__item">
-              <button class="navbar__button" aria-label="Go to Vehicles">
+              <button
+                class="navbar__button"
+                aria-label="Go to Vehicles"
+                data-action="vehicles"
+              >
                 Vehicles
               </button>
             </li>
@@ -87,10 +107,11 @@
         </div>
 
         <!-- Toggle Button Section -->
-        <div class="navbar__toggle-button-container">
+        <div class="navbar__toggle-button-container navbar__item">
           <button
             class="navbar__toggle-button"
             aria-label="Toggle navigation menu"
+            data-action="toggle"
           >
             <i class="fa-solid fa-bars fa-2x navbar__toggle-logo"></i>
           </button>

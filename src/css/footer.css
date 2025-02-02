@@ -4,6 +4,7 @@
     justify-content: space-between;
     padding: var(--spacing-medium);
     background-color: var(--color-primary);
+    z-index: 1000;
 }
 
 .footer__paragraph {
@@ -38,7 +39,6 @@
         align-items: center;
         gap: var(--spacing-small);
         padding: var(--spacing-small);
-        z-index: 1000;
     }
 
     .footer__list {

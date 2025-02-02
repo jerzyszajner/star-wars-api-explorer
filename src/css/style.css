@@ -38,7 +38,6 @@ main {
     align-items: center;
     flex: 1;
     margin: 0 auto;
-    /* filter: blur(2px); */
 }
 
 /* Intro section --------------------------- */
@@ -55,14 +54,14 @@ main {
 
 .intro__heading {
     font-family: Lato-Bold, sans-serif;
-    font-size: var(--font-size-large);
-
+    font-size: var(--font-size-xx-large);
 }
 
 .intro__paragraph {
     font-size: var(--font-size-medium);
 }
 
+/* Card section --------------------------- */
 .card__section {
     display: grid;
     width: 100%;
@@ -145,6 +144,11 @@ main {
 }
 
 @media screen and (max-width: 942px) {
+    .intro__heading {
+        font-size: var(--font-size-large);
+
+    }
+
     .card__section {
         width: 70%;
     }
