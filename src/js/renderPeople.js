@@ -97,7 +97,7 @@ const renderPeople = (peopleArray) => {
     skinColorLabel.classList.add("card__info-label");
 
     card.addEventListener("click", () => {
-      card.classList.toggle("card__info-container--active");
+      infoContainer.classList.toggle("card__info-container--active");
     });
   });
 };

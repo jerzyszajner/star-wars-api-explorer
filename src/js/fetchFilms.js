@@ -10,11 +10,10 @@ const fetchFilms = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const filteredFilms = data.results.filter((film) => film.episode_id <= 6);
-    filteredFilms.sort((a, b) => a.episode_id - b.episode_id);
-    renderFilms(filteredFilms);
+    renderFilms(data.results.slice(0, 6));
   } catch (error) {
-    showNotifications("Failed to fetch data! Try again later.");
+    showNotifications("Failed to fetchFilms data! Try again later.");
+    console.log(error, "Failed to fetchFilms data!");
   }
 };
 
