@@ -8,7 +8,7 @@ const imagesPlanets = [
     image_id: 1,
   },
   {
-    src: "../src/assets/images/planets/aldereen.jpg",
+    src: "../src/assets/images/planets/alderaan.jpg",
     alt: "Alderaan",
     image_id: 2,
   },
@@ -62,10 +62,10 @@ const renderPlanets = (planetsArray) => {
 
     // Create list items
     const name = createListItem("", planet.name);
-    const climate = createListItem("Climate", planet.climate);
-    const terrain = createListItem("Terrain", planet.terrain);
-    const population = createListItem("Population", planet.population);
-    const gravity = createListItem("Gravity", planet.gravity);
+    const climate = createListItem("Climate: ", planet.climate);
+    const terrain = createListItem("Terrain: ", planet.terrain);
+    const population = createListItem("Population: ", planet.population);
+    const gravity = createListItem("Gravity: ", planet.gravity);
 
     // Add classes
     card.classList.add("card");

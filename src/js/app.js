@@ -1,12 +1,12 @@
-import fetchFilms from "./fetchFilms.js";
-import fetchPeople from "./fetchPeople.js";
 import handleNavbarButtons from "./navigation.js";
+import fetchFilms from "./fetchFilms.js";
 
 // Start App
 const startApp = () => {
   console.log("🚀 App started...");
-  fetchPeople();
+
   fetchFilms();
 };
 
+// Event Listener
 document.addEventListener("DOMContentLoaded", startApp);
