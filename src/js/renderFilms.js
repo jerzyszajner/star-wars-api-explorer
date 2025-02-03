@@ -64,7 +64,7 @@ const renderFilms = (filmsArray) => {
     const episode = createListItem("Episode: ", film.episode_id);
     const releaseDate = createListItem("Episode: ", film.release_date);
     const director = createListItem("Director: ", film.director);
-    const openingCrawl = createListItem("Opening crawl: ", film.opening_Crawl);
+    const openingCrawl = createListItem("Opening crawl: ", film.opening_crawl);
 
     // Add classes
     card.classList.add("card");
