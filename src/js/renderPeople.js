@@ -60,6 +60,7 @@ const renderPeople = (peopleArray) => {
     image.src = matchingImage.src;
     image.alt = matchingImage.alt || "Star Wars people image";
 
+    // Create list items
     const name = createListItem("", people.name);
     const height = createListItem("Height: ", people.height);
     const mass = createListItem("Mass: ", people.mass);
