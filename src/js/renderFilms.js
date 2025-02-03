@@ -1,3 +1,5 @@
+import createListItem from "./utils";
+
 // Local images data
 const imagesFilms = [
   {
@@ -48,53 +50,29 @@ const renderFilms = (filmsArray) => {
     const imageContainer = document.createElement("figure");
     const image = document.createElement("img");
     const infoContainer = document.createElement("ul");
-    const title = document.createElement("li");
-    const episode = document.createElement("li");
-    const episodeLabel = document.createElement("span");
-    const releaseDate = document.createElement("li");
-    const releaseDateLabel = document.createElement("span");
-    const director = document.createElement("li");
-    const directorLabel = document.createElement("span");
-    const openingCrawl = document.createElement("li");
-    const openingCrawlLabel = document.createElement("span");
 
     // Append elements
     cardsContainer.append(card);
     card.append(imageContainer, infoContainer);
     imageContainer.append(image);
-    infoContainer.append(title, episode, releaseDate, director, openingCrawl);
-    episode.append(episodeLabel);
-    releaseDate.append(releaseDateLabel);
-    director.append(directorLabel);
-    openingCrawl.append(openingCrawlLabel);
 
     // Insert content and append values
     image.src = matchingImage.src;
     image.alt = matchingImage.alt || "Star Wars film image";
-    title.textContent = film.title;
-    episodeLabel.textContent = "Episode: ";
-    episode.append(film.episode_id);
-    releaseDateLabel.textContent = "Release date: ";
-    releaseDate.append(film.release_date);
-    directorLabel.textContent = "Director: ";
-    director.append(film.director);
-    openingCrawlLabel.textContent = "Opening crawl: ";
-    openingCrawl.append(film.opening_crawl);
+
+    const title = createListItem("", film.title);
+    const episode = createListItem("Episode: ", film.episode_id);
+    const releaseDate = createListItem("Episode: ", film.release_date);
+    const director = createListItem("Director: ", film.director);
+    const openingCrawl = createListItem("Opening crawl: ", film.opening_Crawl);
 
     // Add classes
     card.classList.add("card");
     imageContainer.classList.add("card__image-container");
     image.classList.add("card__image");
     infoContainer.classList.add("card__info-container");
-    title.classList.add("card__info-item");
-    episode.classList.add("card__info-item");
-    episodeLabel.classList.add("card__info-label");
-    releaseDate.classList.add("card__info-item");
-    releaseDateLabel.classList.add("card__info-label");
-    director.classList.add("card__info-item");
-    directorLabel.classList.add("card__info-label");
-    openingCrawl.classList.add("card__info-item");
-    openingCrawlLabel.classList.add("card__info-label");
+
+    infoContainer.append(title, episode, releaseDate, director, openingCrawl);
 
     card.addEventListener("click", () => {
       infoContainer.classList.toggle("card__info-container--active");
