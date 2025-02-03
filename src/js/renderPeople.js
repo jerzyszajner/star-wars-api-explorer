@@ -1,3 +1,5 @@
+import createListItem from "./utils";
+
 // Local images data
 const imagesPeople = [
   {
@@ -48,54 +50,29 @@ const renderPeople = (peopleArray) => {
     const imageContainer = document.createElement("figure");
     const image = document.createElement("img");
     const infoContainer = document.createElement("ul");
-    const name = document.createElement("li");
-    const height = document.createElement("li");
-    const heightLabel = document.createElement("span");
-    const mass = document.createElement("li");
-    const massLabel = document.createElement("span");
-    const hairColor = document.createElement("li");
-    const hairColorLabel = document.createElement("span");
-    const skinColor = document.createElement("li");
-    const skinColorLabel = document.createElement("span");
 
     // Append elements
     cardsContainer.append(card);
     card.append(imageContainer, infoContainer);
     imageContainer.append(image);
-    infoContainer.append(name, height, mass, hairColor, skinColor);
-    height.append(heightLabel);
-    mass.append(massLabel);
-    hairColor.append(hairColorLabel);
-    skinColor.append(skinColorLabel);
 
     // Insert content and append values
     image.src = matchingImage.src;
     image.alt = matchingImage.alt || "Star Wars people image";
-    name.textContent = people.name;
-    heightLabel.textContent = "Height: ";
-    height.append(people.height);
-    massLabel.textContent = "Mass: ";
-    mass.append(people.mass);
-    hairColorLabel.textContent = "Hair color: ";
-    hairColor.append(people.hair_color);
-    skinColorLabel.textContent = "Skin color: ";
-    skinColor.append(people.skin_color);
+
+    const name = createListItem("", people.name);
+    const height = createListItem("Height: ", people.height);
+    const mass = createListItem("Mass: ", people.mass);
+    const hairColor = createListItem("Hair color: ", people.hair_color);
+    const skinColor = createListItem("Skin color: ", people.skin_color);
 
     // Add classes
     card.classList.add("card");
     imageContainer.classList.add("card__image-container");
     image.classList.add("card__image");
     infoContainer.classList.add("card__info-container");
-    name.classList.add("card__info-item");
-    height.classList.add("card__info-item");
-    heightLabel.classList.add("card__info-label");
-    mass.classList.add("card__info-item");
-    massLabel.classList.add("card__info-label");
-    hairColor.classList.add("card__info-item");
-    hairColorLabel.classList.add("card__info-label");
-    skinColor.classList.add("card__info-item");
-    skinColorLabel.classList.add("card__info-label");
 
+    infoContainer.append(name, height, mass, hairColor, skinColor);
     card.addEventListener("click", () => {
       infoContainer.classList.toggle("card__info-container--active");
     });

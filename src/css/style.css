@@ -134,6 +134,11 @@ main {
 .card__info-label {
     font-variant: small-caps;
     color: var(--color-info-label);
+    display: inline;
+}
+
+.card__info-paragraph {
+    display: inline;
 }
 
 /* Media Queries --------------------------- */
