@@ -3,32 +3,32 @@ import createListItem from "./utils";
 // Local images data
 const imagesVehicles = [
   {
-    src: "../src/assets/images/vehicles/snowspeeder.jpg",
+    src: "/images/vehicles/snowspeeder.jpg",
     alt: "Snowspeeder",
     image_id: 1,
   },
   {
-    src: "../src/assets/images/vehicles/sand-crawler.jpg",
+    src: "/images/vehicles/sand-crawler.jpg",
     alt: "Sand Crawler",
     image_id: 2,
   },
   {
-    src: "../src/assets/images/vehicles/t-16-skyhopper.jpg",
+    src: "/images/vehicles/t-16-skyhopper.jpg",
     alt: "T-16 skyhopper",
     image_id: 3,
   },
   {
-    src: "../src/assets/images/vehicles/x-34-landspeeder.jpg",
+    src: "/images/vehicles/x-34-landspeeder.jpg",
     alt: "X-34 landspeeder",
     image_id: 4,
   },
   {
-    src: "../src/assets/images/vehicles/tie-ln-starfighter.jpg",
+    src: "/images/vehicles/tie-ln-starfighter.jpg",
     alt: "TIE/LN starfighter",
     image_id: 5,
   },
   {
-    src: "../src/assets/images/vehicles/tie-bomber.jpg",
+    src: "/images/vehicles/tie-bomber.jpg",
     alt: "TIE bomber",
     image_id: 6,
   },

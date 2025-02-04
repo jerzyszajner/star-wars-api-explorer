@@ -3,32 +3,32 @@ import createListItem from "./utils";
 // Local images data
 const imagesPlanets = [
   {
-    src: "../src/assets/images/planets/tatooine.jpg",
+    src: "/images/planets/tatooine.jpg",
     alt: "Tatooine",
     image_id: 1,
   },
   {
-    src: "../src/assets/images/planets/alderaan.jpg",
+    src: "/images/planets/alderaan.jpg",
     alt: "Alderaan",
     image_id: 2,
   },
   {
-    src: "../src/assets/images/planets/yavin-iv.jpg",
+    src: "/images/planets/yavin-iv.jpg",
     alt: "Yavin IV",
     image_id: 3,
   },
   {
-    src: "../src/assets/images/planets/hoth.jpg",
+    src: "/images/planets/hoth.jpg",
     alt: "Hoth",
     image_id: 4,
   },
   {
-    src: "../src/assets/images/planets/dagobah.jpg",
+    src: "/images/planets/dagobah.jpg",
     alt: "Dagobah",
     image_id: 5,
   },
   {
-    src: "../src/assets/images/planets/bespin.jpg",
+    src: "/images/planets/bespin.jpg",
     alt: "Bespin",
     image_id: 6,
   },

@@ -3,32 +3,32 @@ import createListItem from "./utils";
 // Local images data
 const imagesPeople = [
   {
-    src: "../src/assets/images/people/luke-skywalker.jpg",
+    src: "/images/people/luke-skywalker.jpg",
     alt: "Luke Skywalker",
     image_id: 1,
   },
   {
-    src: "../src/assets/images/people/c-3po.jpg",
+    src: "/images/people/c-3po.jpg",
     alt: "C-3PO",
     image_id: 2,
   },
   {
-    src: "../src/assets/images/people/r2-d2.jpg",
+    src: "/images/people/r2-d2.jpg",
     alt: "R2-D2",
     image_id: 3,
   },
   {
-    src: "../src/assets/images/people/darth-vader.jpg",
+    src: "/images/people/darth-vader.jpg",
     alt: "Darth Vader",
     image_id: 4,
   },
   {
-    src: "../src/assets/images/people/leia-organa.jpg",
+    src: "/images/people/leia-organa.jpg",
     alt: "Leia Organa",
     image_id: 5,
   },
   {
-    src: "../src/assets/images/people/owen-lars.jpg",
+    src: "/images/people/owen-lars.jpg",
     alt: "Owen Lars",
     image_id: 6,
   },
