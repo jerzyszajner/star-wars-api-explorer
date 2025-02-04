@@ -76,6 +76,7 @@ const renderFilms = (filmsArray) => {
     // Append list items to the container
     infoContainer.append(title, episode, releaseDate, director, openingCrawl);
 
+    // Toggle visibility of the card's info container
     card.addEventListener("click", () => {
       infoContainer.classList.toggle("card__info-container--active");
     });

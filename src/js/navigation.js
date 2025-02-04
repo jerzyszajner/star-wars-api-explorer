@@ -1,11 +1,11 @@
 import fetchFilms from "./fetchFilms";
 import fetchPeople from "./fetchPeople";
 import fetchPlanets from "./fetchPlanets";
+import fetchVehicles from "./fetchVehicles";
 
 // Selectors
 const navbar = document.querySelector(".navbar");
 const navbarItems = document.querySelectorAll(".navbar__item");
-const activeFilms = document.querySelector('[data-action="films"]');
 const navbarControlsList = document.querySelector(".navbar__controls-list");
 const cardsSection = document.querySelector(".card__section");
 
@@ -67,6 +67,8 @@ const handleNavbarButtons = (e) => {
       console.log("Planets button clicked");
       break;
     case "vehicles":
+      fetchVehicles();
+      cardsSection.style.display = "grid";
       console.log("Vehicles button clicked");
       break;
   }

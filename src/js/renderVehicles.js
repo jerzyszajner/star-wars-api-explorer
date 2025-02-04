@@ -6,31 +6,26 @@ const imagesVehicles = [
     src: "../src/assets/images/vehicles/snowspeeder.jpg",
     alt: "Snowspeeder",
     image_id: 1,
-    x,
   },
   {
     src: "../src/assets/images/vehicles/sand-crawler.jpg",
     alt: "Sand Crawler",
     image_id: 2,
-    x,
   },
   {
     src: "../src/assets/images/vehicles/t-16-skyhopper.jpg",
     alt: "T-16 skyhopper",
     image_id: 3,
-    x,
   },
   {
     src: "../src/assets/images/vehicles/x-34-landspeeder.jpg",
     alt: "X-34 landspeeder",
     image_id: 4,
-    x,
   },
   {
     src: "../src/assets/images/vehicles/tie-ln-starfighter.jpg",
     alt: "TIE/LN starfighter",
     image_id: 5,
-    x,
   },
   {
     src: "../src/assets/images/vehicles/tie-bomber.jpg",
@@ -74,9 +69,9 @@ const renderVehicles = (vehiclesArray) => {
 
     // Add classes
     card.classList.add("card");
-    imageContainer.classList.add("card__image");
-    infoContainer.classList.add("card__info");
-
+    imageContainer.classList.add("card__image-container");
+    image.classList.add("card__image");
+    infoContainer.classList.add("card__info-container");
     // Append list items to the container
     infoContainer.append(name, model, manufacturer, crew, passengers);
 
@@ -86,4 +81,5 @@ const renderVehicles = (vehiclesArray) => {
     });
   });
 };
+
 export default renderVehicles;
