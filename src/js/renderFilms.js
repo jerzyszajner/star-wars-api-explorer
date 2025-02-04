@@ -56,10 +56,11 @@ const renderFilms = (filmsArray) => {
     card.append(imageContainer, infoContainer);
     imageContainer.append(image);
 
-    // Insert content and append values
+    // Insert content
     image.src = matchingImage.src;
     image.alt = matchingImage.alt || "Star Wars film image";
 
+    // Create list items
     const title = createListItem("", film.title);
     const episode = createListItem("Episode: ", film.episode_id);
     const releaseDate = createListItem("Episode: ", film.release_date);
@@ -72,6 +73,7 @@ const renderFilms = (filmsArray) => {
     image.classList.add("card__image");
     infoContainer.classList.add("card__info-container");
 
+    // Append list items to the container
     infoContainer.append(title, episode, releaseDate, director, openingCrawl);
 
     card.addEventListener("click", () => {

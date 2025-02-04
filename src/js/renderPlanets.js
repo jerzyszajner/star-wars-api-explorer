@@ -56,7 +56,7 @@ const renderPlanets = (planetsArray) => {
     card.append(imageContainer, infoContainer);
     imageContainer.append(image);
 
-    // Insert content and append values
+    // Insert content
     image.src = matchingImage.src;
     image.alt = matchingImage.alt || "Star Wars planet image";
 
@@ -73,7 +73,10 @@ const renderPlanets = (planetsArray) => {
     image.classList.add("card__image");
     infoContainer.classList.add("card__info-container");
 
+    // Append list items to the container
     infoContainer.append(name, climate, terrain, population, gravity);
+
+    // Toggle visibility of the card's info container
     card.addEventListener("click", () => {
       infoContainer.classList.toggle("card__info-container--active");
     });

@@ -10,6 +10,7 @@ const fetchPlanets = async () => {
   try {
     const response = await fetch(url);
     const data = await response.json();
+
     renderPlanets(data.results.slice(0, 6));
   } catch (error) {
     showNotifications("Failed to fetchPlanets data! Try again later.");

@@ -56,7 +56,7 @@ const renderPeople = (peopleArray) => {
     card.append(imageContainer, infoContainer);
     imageContainer.append(image);
 
-    // Insert content and append values
+    // Insert content
     image.src = matchingImage.src;
     image.alt = matchingImage.alt || "Star Wars people image";
 
@@ -73,7 +73,10 @@ const renderPeople = (peopleArray) => {
     image.classList.add("card__image");
     infoContainer.classList.add("card__info-container");
 
+    // Append list items to the container
     infoContainer.append(name, height, mass, hairColor, skinColor);
+
+    // Toggle visibility of the card's info container
     card.addEventListener("click", () => {
       infoContainer.classList.toggle("card__info-container--active");
     });
