@@ -3,76 +3,71 @@ import fetchPeople from "./fetchPeople";
 import fetchPlanets from "./fetchPlanets";
 import fetchVehicles from "./fetchVehicles";
 
-// Selectors
-const navbar = document.querySelector(".navbar");
-const navbarItems = document.querySelectorAll(".navbar__item");
-const navbarControlsList = document.querySelector(".navbar__controls-list");
-const cardsSection = document.querySelector(".card__section");
+// Initialize navigation functionality
+const navigation = () => {
+  // Selectors
+  const navbar = document.querySelector(".navbar");
+  const navbarItems = document.querySelectorAll(".navbar__item");
+  const navbarControlsList = document.querySelector(".navbar__controls-list");
 
-// Adjust navbar for mobile
-const adjustNavbarForMobile = () => {
-  const activeItem = document.querySelector(".navbar__item--active");
+  // Helper function to activate navbar item
+  const activateNavItem = (action) => {
+    const button = document.querySelector(`[data-action="${action}"]`);
+    if (button) {
+      const item = button.closest(".navbar__item");
+      if (item) {
+        item.classList.add("navbar__item--active");
+      }
+    }
+  };
 
-  if (window.innerWidth < 600) {
-    activeItem.classList.remove("navbar__item--active");
-    cardsSection.style.display = "none";
-  }
+  // Handle navbar buttons
+  const handleNavButtons = (e) => {
+    const clickedButton = e.target.closest("button");
+    if (!clickedButton || !clickedButton.dataset.action) return;
+
+    e.preventDefault();
+    const action = clickedButton.dataset.action;
+
+    // Handle toggle action (hamburger menu)
+    if (action === "toggle") {
+      navbarControlsList.classList.toggle("navbar__controls-list--active");
+      return;
+    }
+
+    // Close mobile menu and reset active states
+    navbarControlsList.classList.remove("navbar__controls-list--active");
+    navbarItems.forEach((item) =>
+      item.classList.remove("navbar__item--active")
+    );
+
+    // Handle content actions
+    switch (action) {
+      case "logo":
+        fetchFilms();
+        activateNavItem("films");
+        break;
+      case "films":
+        fetchFilms();
+        activateNavItem("films");
+        break;
+      case "people":
+        fetchPeople();
+        activateNavItem("people");
+        break;
+      case "planets":
+        fetchPlanets();
+        activateNavItem("planets");
+        break;
+      case "vehicles":
+        fetchVehicles();
+        activateNavItem("vehicles");
+        break;
+    }
+  };
+
+  // Add event listeners
+  navbar.addEventListener("click", handleNavButtons);
 };
 
-adjustNavbarForMobile();
-
-// Handle navbar buttons
-const handleNavbarButtons = (e) => {
-  const clickedButton = e.target.closest("button");
-
-  if (!clickedButton || !clickedButton.dataset.action) return;
-  e.preventDefault();
-
-  const action = clickedButton.dataset.action;
-
-  const parentItem = clickedButton.closest(".navbar__item");
-  if (!parentItem) return;
-
-  navbarItems.forEach((item) => {
-    item.classList.remove("navbar__item--active");
-  });
-
-  parentItem.classList.add("navbar__item--active");
-  navbarControlsList.classList.remove("navbar__controls-list--active");
-
-  // Handle actions
-  switch (action) {
-    case "logo":
-      fetchFilms();
-      document.querySelector('[data-action="films"]').click();
-      cardsSection.style.display = "grid";
-      break;
-    case "toggle":
-      navbarControlsList.classList.add("navbar__controls-list--active");
-      setTimeout(() => {
-        cardsSection.style.display = "none";
-      }, 800);
-      break;
-    case "films":
-      fetchFilms();
-      cardsSection.style.display = "grid";
-      break;
-    case "people":
-      fetchPeople();
-      cardsSection.style.display = "grid";
-      break;
-    case "planets":
-      fetchPlanets();
-      cardsSection.style.display = "grid";
-      break;
-    case "vehicles":
-      fetchVehicles();
-      cardsSection.style.display = "grid";
-      break;
-  }
-};
-
-// Event listener
-navbar.addEventListener("click", handleNavbarButtons);
-
-export default handleNavbarButtons;
+export default navigation;

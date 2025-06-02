@@ -1,6 +1,7 @@
 import renderVehicles from "./renderVehicles";
 import showNotifications from "./showNotifications";
 
+// Fetch vehicles from the API
 const fetchVehicles = async () => {
   const url = "https://swapi.py4e.com/api/vehicles/";
   if (!navigator.onLine) {

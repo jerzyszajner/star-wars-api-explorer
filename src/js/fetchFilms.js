@@ -1,6 +1,7 @@
 import renderFilms from "./renderFilms";
 import showNotifications from "./showNotifications";
 
+// Fetch films from the API
 const fetchFilms = async () => {
   const url = "https://swapi.py4e.com/api/films/";
   if (!navigator.onLine) {

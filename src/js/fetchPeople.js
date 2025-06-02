@@ -1,8 +1,9 @@
 import renderPeople from "./renderPeople";
 import showNotifications from "./showNotifications";
 
+// Fetch people from the API
 const fetchPeople = async () => {
-  const url = "https://swapi.py4e.com/api/peoplex/";
+  const url = "https://swapi.py4e.com/api/people/";
   if (!navigator.onLine) {
     showNotifications("No internet connection!");
     return;

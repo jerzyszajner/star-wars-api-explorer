@@ -1,6 +1,7 @@
 import renderPlanets from "./renderPlanets";
 import showNotifications from "./showNotifications";
 
+// Fetch planets from the API
 const fetchPlanets = async () => {
   const url = "https://swapi.py4e.com/api/planets/";
   if (!navigator.onLine) {

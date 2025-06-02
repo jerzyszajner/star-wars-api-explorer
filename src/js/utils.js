@@ -1,3 +1,4 @@
+// Utility function to create a list item with a title and content
 const createListItem = (title, content) => {
   const item = document.createElement("li");
   const itemTitle = document.createElement("h3");

@@ -1,10 +1,9 @@
-import handleNavbarButtons from "./navigation.js";
+import navigation from "./navigation.js";
 import fetchFilms from "./fetchFilms.js";
 
-// Start App
+// Initialize application
 const startApp = () => {
-  console.log("🚀 App started...");
-
+  navigation();
   fetchFilms();
 };
 

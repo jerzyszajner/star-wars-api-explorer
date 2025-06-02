@@ -94,12 +94,14 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 0 0 var(--spacing-medium);
 }
 
 .navbar__toggle-logo {
     color: var(--text-color-primary);
     transition: color 0.3s ease-in-out;
     display: none;
+    font-size: var(--font-size-xx-large);
 }
 
 .navbar__toggle-logo:hover {
