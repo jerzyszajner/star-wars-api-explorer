@@ -56,22 +56,18 @@ const handleNavbarButtons = (e) => {
     case "films":
       fetchFilms();
       cardsSection.style.display = "grid";
-      console.log("Films button clicked");
       break;
     case "people":
       fetchPeople();
       cardsSection.style.display = "grid";
-      console.log("People button clicked");
       break;
     case "planets":
       fetchPlanets();
       cardsSection.style.display = "grid";
-      console.log("Planets button clicked");
       break;
     case "vehicles":
       fetchVehicles();
       cardsSection.style.display = "grid";
-      console.log("Vehicles button clicked");
       break;
   }
 };

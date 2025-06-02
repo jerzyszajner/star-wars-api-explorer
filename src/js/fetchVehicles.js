@@ -9,6 +9,12 @@ const fetchVehicles = async () => {
   }
   try {
     const response = await fetch(url);
+
+    // Check if the response is ok
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
     const data = await response.json();
     renderVehicles(data.results.slice(0, 6));
   } catch (error) {

@@ -9,6 +9,12 @@ const fetchFilms = async () => {
   }
   try {
     const response = await fetch(url);
+
+    // Check if the response is ok
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`);
+    }
+
     const data = await response.json();
     renderFilms(data.results.slice(0, 6));
   } catch (error) {
