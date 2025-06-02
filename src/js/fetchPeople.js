@@ -13,7 +13,6 @@ const fetchPeople = async () => {
     renderPeople(data.results.slice(0, 6));
   } catch (error) {
     showNotifications("Failed to fetchPeople data! Try again later.");
-    console.log(error, "Failed to fetchPeople data!");
   }
 };
 

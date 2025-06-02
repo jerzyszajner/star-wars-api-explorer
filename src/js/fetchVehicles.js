@@ -13,7 +13,6 @@ const fetchVehicles = async () => {
     renderVehicles(data.results.slice(0, 6));
   } catch (error) {
     showNotifications("Failed to fetchVehicles data! Try again later.");
-    console.log(error, "Failed to fetchVehicles data!");
   }
 };
 

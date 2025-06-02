@@ -14,7 +14,6 @@ const fetchPlanets = async () => {
     renderPlanets(data.results.slice(0, 6));
   } catch (error) {
     showNotifications("Failed to fetchPlanets data! Try again later.");
-    console.log(error, "Failed to fetchPlanets data!");
   }
 };
 

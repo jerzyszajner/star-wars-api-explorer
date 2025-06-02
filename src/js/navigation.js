@@ -28,6 +28,8 @@ const handleNavbarButtons = (e) => {
   if (!clickedButton || !clickedButton.dataset.action) return;
   e.preventDefault();
 
+  const action = clickedButton.dataset.action;
+
   const parentItem = clickedButton.closest(".navbar__item");
   if (!parentItem) return;
 
@@ -36,13 +38,13 @@ const handleNavbarButtons = (e) => {
   });
 
   parentItem.classList.add("navbar__item--active");
-  const action = clickedButton.dataset.action;
   navbarControlsList.classList.remove("navbar__controls-list--active");
 
   // Handle actions
   switch (action) {
     case "logo":
       fetchFilms();
+      document.querySelector('[data-action="films"]').click();
       cardsSection.style.display = "grid";
       break;
     case "toggle":

@@ -13,7 +13,6 @@ const fetchFilms = async () => {
     renderFilms(data.results.slice(0, 6));
   } catch (error) {
     showNotifications("Failed to fetchFilms data! Try again later.");
-    console.log(error, "Failed to fetchFilms data!");
   }
 };
 
