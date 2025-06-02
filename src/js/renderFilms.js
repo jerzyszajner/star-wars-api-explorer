@@ -3,32 +3,32 @@ import createListItem from "./utils";
 // Local images data
 const imagesFilms = [
   {
-    src: "/images/films/the-phantom-menace.jpg",
+    src: "/images/films/the-phantom-menace.webp",
     alt: "The Phantom Menace",
     image_id: 1,
   },
   {
-    src: "/images/films/attack-of-the-clones.jpg",
+    src: "/images/films/attack-of-the-clones.webp",
     alt: "Attack of the Clones",
     image_id: 2,
   },
   {
-    src: "/images/films/revenge-of-the-sith.jpg",
+    src: "/images/films/revenge-of-the-sith.webp",
     alt: "Revenge of the Sith",
     image_id: 3,
   },
   {
-    src: "/images/films/a-new-hope.jpg",
+    src: "/images/films/a-new-hope.webp",
     alt: "A New Hope",
     image_id: 4,
   },
   {
-    src: "/images/films/the-empire-strikes-back.jpg",
+    src: "/images/films/the-empire-strikes-back.webp",
     alt: "The Empire Strikes Back",
     image_id: 5,
   },
   {
-    src: "/images/films/return-of-the-jedi.jpg",
+    src: "/images/films/return-of-the-jedi.webp",
     alt: "Return of the Jedi",
     image_id: 6,
   },
